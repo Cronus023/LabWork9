@@ -5,7 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Ad implements Serializable, Identifiable {
-	//private static final long serialVersionUID = -1777984074044025486L;
+	private static final long serialVersionUID = -1777984074044025486L;
 	//id of message
 	private int id = 0;
 	//title

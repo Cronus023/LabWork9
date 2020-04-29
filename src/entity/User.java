@@ -3,7 +3,7 @@ package entity;
 import java.io.Serializable;
 
 public class User implements Serializable, Identifiable {
-	//private static final long serialVersionUID = -5363773994153628499L;
+	private static final long serialVersionUID = -5363773994153628499L;
 	private int id;
 	private String login = "";
 	private String name = "";

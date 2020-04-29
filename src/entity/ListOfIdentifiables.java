@@ -7,6 +7,8 @@ import java.io.Serializable;
 import java.util.HashSet;
 
 public class ListOfIdentifiables<T extends Identifiable & Serializable> implements Serializable {
+	private static final long serialVersionUID = -4621472982618921772L;
+
 	protected HashSet<T> items = new HashSet<T>();
     private transient Integer nextId;
 
