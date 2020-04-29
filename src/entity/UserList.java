@@ -15,7 +15,7 @@ public class UserList extends ListOfIdentifiables<User> {
 
 	public synchronized User findUser(Integer id) {
 		// find user by id
-		for (User user : items) {
+		for  (User user : items) {
 			if (user.getId() == id) {
 				return user;
 			}
