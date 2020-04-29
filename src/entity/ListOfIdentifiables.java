@@ -11,24 +11,31 @@ public class ListOfIdentifiables<T extends Identifiable & Serializable> implemen
     private transient Integer nextId;
 
     public ListOfIdentifiables() {
+    	// start value of the next free id - 1 
         nextId = 1;
     }
+    
+    
 
+    //read from stream object, auto  method
     @SuppressWarnings("unchecked")
     private void readObject(final ObjectInputStream in) throws IOException, ClassNotFoundException {
         items = (HashSet<T>)in.readObject();
         nextId = 0;
+        //find max id
         for(T item : items) {
             final Integer itemId = item.getId();
             if(itemId > nextId)
                 nextId = itemId;
         }
+        //free id 
         nextId++;
     }
-
+    //write to stream object, auto method
     private void writeObject(final ObjectOutputStream out) throws IOException {
         out.writeObject(items);
     }
+    
     protected int getNextId() {
         return nextId++;
     }
