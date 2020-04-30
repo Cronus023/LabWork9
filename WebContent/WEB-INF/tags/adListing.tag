@@ -19,7 +19,7 @@
                 <c:param name="sort" value="subject"/>
                 <c:param name="dir" value="asc"/>
                 </c:url>">
-                <img src="<c:url value="https://image.flaticon.com/icons/png/512/44/44674.png"/>"
+                <img src="<c:url value= "https://image.flaticon.com/icons/png/512/44/44674.png"/>"
 			width="20" height="19" border="0" align="middle" alt="smith">
 			</a>
 			<a href="<c:url value="${pageContext.request.requestURL}">
@@ -84,8 +84,8 @@
 				<td><fmt:formatDate pattern="HH:mm:ss dd-MM-yyyy"
 						value="${ad.lastModifiedDate}" /></td>
 				<td><c:if test="${editMode==true}">
-						<my:deleteButton ad="${ad}" />
-						<my:editButton ad="${ad}" />
+					<my:deleteButton ad="${ad}" />
+						<my:editButton ad="${ad}" />	
 					</c:if></td>
 			</tr>
 		</c:forEach>
